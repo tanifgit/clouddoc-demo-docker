@@ -1,0 +1,14 @@
+version: "3.9"
+services:
+  clouddoc-demo:
+    build: .
+    image: clouddoc-demo:latest
+    environment:
+      IRIS_HOST: ${IRIS_HOST}
+      IRIS_PORT: ${IRIS_PORT}
+      IRIS_NAMESPACE: ${IRIS_NAMESPACE}
+      IRIS_USER: ${IRIS_USER}
+      IRIS_PASSWORD: ${IRIS_PASSWORD}
+      COLLECTION_NAME: ${COLLECTION_NAME}
+    volumes:
+      - ${CERT_FILE_HOST_PATH}:/app/cert.pem:ro
