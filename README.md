@@ -75,7 +75,7 @@ docker build -t clouddoc-demo .
 ## 5. Run with a plain docker run
 
 ```bash
-docker run --rm       -e IRIS_HOST="your-hostname.elb.us-west-2.amazonaws.com"       -e IRIS_PORT="443"       -e IRIS_NAMESPACE="USER"       -e IRIS_USER="SQLAdmin"       -e IRIS_PASSWORD="your-deployment-password"       -e COLLECTION_NAME="demoPeople"       -v /absolute/path/to/your/cert-file.pem:/app/cert.pem:ro       clouddoc-demo
+docker run --rm -e IRIS_HOST="your-hostname.elb.us-west-2.amazonaws.com" -e IRIS_PORT="443" -e IRIS_NAMESPACE="USER" -e IRIS_USER="SQLAdmin" -e IRIS_PASSWORD="your-deployment-password" -e COLLECTION_NAME="demoPeople" -v /absolute/path/to/your/cert-file.pem:/app/cert.pem:ro clouddoc-demo
 ```
 
 Replace the values above with the connection information from your Cloud Services deployment
